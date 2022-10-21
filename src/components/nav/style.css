@@ -1,0 +1,76 @@
+.nav{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    align-items: center;
+}
+.nav__div{
+    display: flex;
+    gap: 10px;
+}
+.nav__div i{
+    font-size: 30px;
+    color: black;
+}
+.nav__div span{
+    cursor: pointer;
+}
+.nav__div-explore{
+    display: flex;
+    position: relative;
+    gap: 2px;
+    align-items: center;
+}
+.nav__div-explore i{
+    font-size: 20px;
+    color: black;
+}
+#explore-flotante{
+    position: absolute;
+    display: none;
+    top: 125%;
+    right: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(3, 3, 3, 0.514);
+    padding: 7px;
+}
+#explore-flotante ul li{
+    list-style: none;
+    display: inline-block;
+}
+#explore-flotante ul li a{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 10px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#explore-flotante ul li a i{
+    font-size: 25px;
+}
+#linkedin{
+    color: #0e76a8;
+}
+#gmail{
+    color: #d44638;
+}
+#instagram{
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+@media (min-width: 800px){
+    .nav{
+        padding: 10px 25px;
+    }
+    .nav h2{
+        font-size: 30px;
+    }
+}
