@@ -59,6 +59,32 @@
     border: none;
     outline: none;
 }
+.options{
+    position: relative;
+}
+#options-flotante{
+    position: absolute;
+    width: 140px;
+    top: 130%;
+    right: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(3, 3, 3, 0.4);
+    display: none;
+}
+#options-flotante ul{
+    width: 140px;
+    background-color: rgb(37, 37, 65);
+    list-style: none;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 3px 0 3px 9px;
+}
+#options-flotante ul li{
+    padding: 11px 10px;
+    display: flex;
+    color: white;
+    gap: 8px;
+}
 @media screen and (min-width: 500px){
     .header__container-search div{
         width: 80%;
@@ -76,5 +102,8 @@
     }
     .header__container-search p i{
         font-size: 20px;
+    }
+    #options-flotante{
+        left: 10%;
     }
 }

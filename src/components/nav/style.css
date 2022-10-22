@@ -6,6 +6,7 @@
     justify-content: space-between;
     padding: 5px 25px;
     align-items: center;
+    z-index: 10;
 }
 .nav__div{
     display: flex;
@@ -26,7 +27,6 @@
 }
 .nav__div-explore i{
     font-size: 20px;
-    color: black;
 }
 #explore-flotante{
     position: absolute;
@@ -36,7 +36,7 @@
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px 1px rgba(3, 3, 3, 0.514);
-    padding: 7px;
+    padding: 10px 15px;
 }
 #explore-flotante ul li{
     list-style: none;
@@ -46,7 +46,7 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    padding: 8px 10px;
+    padding: 8px;
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -55,7 +55,7 @@
     font-size: 25px;
 }
 #linkedin{
-    color: #0e76a8;
+    color: #1f95cc;
 }
 #gmail{
     color: #d44638;
@@ -64,7 +64,7 @@
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-image: linear-gradient(to right, #eb9941, #eb7a51, #f35e74, #cc2366, #bc1888);
 }
 @media (min-width: 800px){
     .nav{

@@ -9,9 +9,10 @@ const App = () => {
   const [ search, setSearch] = useState("")
   const [ images, setImages ] = useState([])
   const [ mensaje, setMensaje ] = useState("")
+  const [ tipo, setTipo ] = useState("photo")
 
   const traerImages = async() => {
-    const data = await getImages(search);
+    const data = await getImages(search, tipo);
     if(search !== ""){
       setMensaje(`${data.total} Imágenes gratis de ${search}`)
     }
@@ -27,12 +28,12 @@ const App = () => {
   }
   useEffect(() => {
     traerImages()
-    }, [search]);
+    }, [search, tipo]);
   
   return (
     <div>
       <Nav />
-      <Header setSearch={setSearch}/>
+      <Header setSearch={setSearch} setTipo={setTipo} tipo={tipo}/>
       <Main mensaje={mensaje} search={search} images={images}/>
       <Footer />
     </div>

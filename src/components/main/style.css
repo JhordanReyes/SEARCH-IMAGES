@@ -1,14 +1,13 @@
 .main{
-    width: 100%;
+    width: 80%;
+    margin: auto;
     padding: 20px;
 }
 .main__section{
     width: 100%;
     display: grid;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 10px;
 }
 .main p{
     color: rgba(8, 8, 8, 0.6);
@@ -16,7 +15,6 @@
 }
 @media (min-width: 768px){
     .main{
-        padding: 20px 40px;
         color: rgb(50, 168, 40);
     }
 }

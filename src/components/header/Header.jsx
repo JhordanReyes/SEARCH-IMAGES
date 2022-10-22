@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import "./style.css"
 
-const Header = ({ setSearch }) => {
+const Header = ({ setSearch, setTipo, tipo }) => {
 
     const [ arrow, setArrow] = useState(false)
     const [ dataSearch, setDataSearch] = useState("")
 
     const handleArrow = () => {
         setArrow(!arrow)
+        const optionsFlotante = document.getElementById("options-flotante");
+        arrow ? optionsFlotante.style.display = "none" : optionsFlotante.style.display = "block"
     }
     const handleSearch = (e) => {
         e.preventDefault();
@@ -29,7 +31,9 @@ const Header = ({ setSearch }) => {
                 <p>Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad.</p>
                 <div className='header__container-search'>
                     <form onSubmit={e => handleSearch(e)}>                      
-                        <i className='bx bx-search-alt-2' id='search'></i>
+                        <i
+                            className='bx bx-search-alt-2' id='search'
+                            onClick={handleSearch}></i>
                         <input
                             type="text"
                             placeholder='Buscar imágenes'
@@ -37,9 +41,30 @@ const Header = ({ setSearch }) => {
                             onChange={(e)=> colorSearch(e)}
                         />
                     </form>
-                    <p onClick={ handleArrow }>
-                        <span>Imágenes</span>
-                        <i className={`bx ${arrow ? "bx-chevron-up" : "bx-chevron-down"}`} ></i>
+                    <p onClick={ handleArrow } className="options">
+                        <span>{tipo === "photo" ? "Imágenes"
+                            : tipo === "illustration" ? "Ilustración"
+                            : tipo === "all" ? "Todos"
+                            : "Vector"}</span>
+                        <i
+                            className={`bx ${arrow ? "bx-chevron-up" : "bx-chevron-down"}`}
+                        />
+                        <div id='options-flotante'>
+                            <ul>
+                                <li onClick={ ()=> setTipo("all") }>
+                                    <i class='bx bx-palette'></i><span>Todos</span>
+                                </li>
+                                <li onClick={ ()=> setTipo("photo") }>
+                                    <i class='bx bx-image'></i><span>Imágenes</span>
+                                </li>
+                                <li onClick={ ()=> setTipo("illustration") }>
+                                    <i class='bx bx-brush'></i><span>Ilustración</span>
+                                </li>
+                                <li onClick={ ()=> setTipo("vector") }>
+                                    <i class='bx bx-paint-roll'></i><span>Vector</span>
+                                </li>
+                            </ul>
+                        </div>
                     </p>
                 </div>
             </div>
