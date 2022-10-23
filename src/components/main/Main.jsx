@@ -4,7 +4,7 @@ import "./style.css"
 const Main = ({images, mensaje}) => {
     return (
         <main className="main">
-            <p>{mensaje}</p>
+            <p>{mensaje }</p>
             <section className="main__section">            
                 {
                     images.map( img =>
