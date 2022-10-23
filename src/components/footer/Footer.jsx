@@ -5,20 +5,20 @@ const Footer = () => {
   return (
     <footer className='footer'>
         <div className='footer__info'>
-            <h2>pixabay</h2>
+            <h2>JhordanR</h2>
             <p>Nuestro banco de imágenes tiene más de 2.9 millón de imágenes y videos compartidos por nuestra talentosa comunidad.</p>
             <div>
                 <a title='contáctame' target="_blank" href="https://www.linkedin.com/in/jhordanreyes/">
-                    <i class='bx bxl-linkedin-square' ></i>
+                    <i className='bx bxl-linkedin-square' ></i>
                 </a>
                 <a title='escríbeme' target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=reyesjhordan4@gmail.com">
-                    <i class='bx bxl-gmail' ></i>
+                    <i className='bx bxl-gmail' ></i>
                 </a>
                 <a title='sígueme' href="https://github.com/JhordanReyes" target="_blank">
-                    <i class='bx bxl-github'></i>
+                    <i className='bx bxl-github'></i>
                 </a>
                 <a title='sígueme' target="_blank" href="https://www.instagram.com/reyesjhordan4/">
-                    <i class='bx bxl-instagram' ></i>
+                    <i className='bx bxl-instagram' ></i>
                 </a>
             </div>
         </div>

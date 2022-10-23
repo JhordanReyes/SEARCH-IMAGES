@@ -41,7 +41,7 @@ const Header = ({ setSearch, setTipo, tipo }) => {
                             onChange={(e)=> colorSearch(e)}
                         />
                     </form>
-                    <p onClick={ handleArrow } className="options">
+                    <span onClick={ handleArrow } className="options">
                         <span>{tipo === "photo" ? "Imágenes"
                             : tipo === "illustration" ? "Ilustración"
                             : tipo === "all" ? "Todos"
@@ -52,20 +52,20 @@ const Header = ({ setSearch, setTipo, tipo }) => {
                         <div id='options-flotante'>
                             <ul>
                                 <li onClick={ ()=> setTipo("all") }>
-                                    <i class='bx bx-palette'></i><span>Todos</span>
+                                    <i className='bx bx-palette'></i><span>Todos</span>
                                 </li>
                                 <li onClick={ ()=> setTipo("photo") }>
-                                    <i class='bx bx-image'></i><span>Imágenes</span>
+                                    <i className='bx bx-image'></i><span>Imágenes</span>
                                 </li>
                                 <li onClick={ ()=> setTipo("illustration") }>
-                                    <i class='bx bx-brush'></i><span>Ilustración</span>
+                                    <i className='bx bx-brush'></i><span>Ilustración</span>
                                 </li>
                                 <li onClick={ ()=> setTipo("vector") }>
-                                    <i class='bx bx-paint-roll'></i><span>Vector</span>
+                                    <i className='bx bx-paint-roll'></i><span>Vector</span>
                                 </li>
                             </ul>
                         </div>
-                    </p>
+                    </span>
                 </div>
             </div>
         </header>

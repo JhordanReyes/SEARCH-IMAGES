@@ -34,14 +34,14 @@
     justify-content: space-between;
     margin: auto;
 }
-.header__container-search p{
+.header__container-search span{
     font-size: 14px;
     color: rgb(105, 104, 104);
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-.header__container-search p i{
+.header__container-search span i{
     font-size: 19px;
 }
 .header__container-search form{
@@ -82,8 +82,11 @@
 #options-flotante ul li{
     padding: 11px 10px;
     display: flex;
-    color: white;
+    color: rgb(221, 217, 217);
     gap: 8px;
+}
+#options-flotante ul li span{
+    color: rgb(221, 217, 217);
 }
 @media screen and (min-width: 500px){
     .header__container-search div{

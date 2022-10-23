@@ -1,8 +1,40 @@
 .card{
     width: 100%;
+    max-width: 350px;
+    min-width: 260px;
     margin: auto;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+.card__container{
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 3;
+    transition: 0.4s;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 10px;
+}
+.card__container p{
+    color: #fff !important;
+    padding-bottom: 0 !important;
+}
+.card:hover div{
+    opacity: 1;
+}
+.card:hover img{
+    transform: scale(1.03);
 }
 .card img{
     width: 100%;
     height: 220px;
+    transition: 0.3s;
 }

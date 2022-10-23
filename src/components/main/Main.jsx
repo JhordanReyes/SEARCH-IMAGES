@@ -1,7 +1,7 @@
 import Card from "./card/Card"
 import "./style.css"
 
-const Main = ({search, images, mensaje}) => {
+const Main = ({images, mensaje}) => {
     return (
         <main className="main">
             <p>{mensaje}</p>
@@ -11,6 +11,8 @@ const Main = ({search, images, mensaje}) => {
                         (<Card
                             key={img.id}
                             url={img.url}
+                            likes={img.likes}
+                            comments={img.comments}
                         />)
                     )
                 }

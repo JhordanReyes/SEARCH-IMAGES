@@ -22,6 +22,7 @@ const App = () => {
         url: img.largeImageURL,
         author: img.user,
         likes: img.likes,
+        comments: img.comments,
       }
     });
     setImages(dataImage)
@@ -34,7 +35,10 @@ const App = () => {
     <div>
       <Nav />
       <Header setSearch={setSearch} setTipo={setTipo} tipo={tipo}/>
-      <Main mensaje={mensaje} search={search} images={images}/>
+      <Main 
+        mensaje={mensaje}
+        images={images}
+      />
       <Footer />
     </div>
   )
