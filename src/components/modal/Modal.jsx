@@ -9,8 +9,20 @@ const Modal = ({ setModal, modal, image }) => {
         const divModal = document.getElementById("modal");
         modal ? divModal.style.display = "none" : divModal.style.display = "flex";
     }
+    const downloadImage = async() => {
+        const imagen = await fetch(image.url);
+        const imgBlob = await imagen.blob();
+        const imgURL = URL.createObjectURL(imgBlob);
+        const link = document.createElement("a");
+        link.href = imgURL;
+        link.setAttribute("download", `${image.author}.png`);
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    }        
     const handleDescargar = () => {
-        console.log("descargando")
+        const descargar = {"ruta":image.url, "nombre":image.author}
+        javascript:downloadImage(`${JSON.stringify(descargar)}`);
     }
     return (
         <div id='modal'>
